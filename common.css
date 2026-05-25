@@ -151,7 +151,7 @@ h2.section-title {
 }
 .card + .card { margin-top: 12px; }
 
-/* ── 슬롯 카드 (Triple 식) ─────────────────── */
+/* ── 슬롯 카드 ─────────────────── */
 .slot {
   position: relative;
   display: flex;
