@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>도시 선택 — TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="device">
+
+  <header class="header">
+    <button class="header-btn">←</button>
+    <div class="header-title">AI 맞춤 일정 만들기</div>
+    <div style="font-size: 12px; font-weight: 700; color: var(--primary-deep); width: 36px; text-align: right;">1/5</div>
+  </header>
+
+  <main class="main loose">
+
+    <div class="progress">
+      <div class="progress-fill" style="width: 20%;"></div>
+    </div>
+
+    <h1 class="title">떠나고 싶은 도시는?</h1>
+    <p class="subtitle">도시 1곳을 선택해 주세요</p>
+
+    <!-- 일본 -->
+    <div style="font-size: 11px; font-weight: 700; color: var(--text-soft); letter-spacing: 0.5px; margin: 6px 0 10px;">🇯🇵 일본</div>
+    <div class="option-grid cols-3">
+      <div class="option selected">
+        <span class="emoji">🗾</span>
+        도쿄
+      </div>
+      <div class="option">
+        <span class="emoji">🏯</span>
+        오사카
+      </div>
+      <div class="option">
+        <span class="emoji">⛩️</span>
+        교토
+      </div>
+      <div class="option">
+        <span class="emoji">🍜</span>
+        후쿠오카
+      </div>
+    </div>
+
+    <!-- 동남아 -->
+    <div style="font-size: 11px; font-weight: 700; color: var(--text-soft); letter-spacing: 0.5px; margin: 22px 0 10px;">🌴 동남아</div>
+    <div class="option-grid cols-3">
+      <div class="option">
+        <span class="emoji">🏝️</span>
+        발리
+      </div>
+      <div class="option">
+        <span class="emoji">🌊</span>
+        다낭
+      </div>
+      <div class="option">
+        <span class="emoji">🛕</span>
+        방콕
+      </div>
+      <div class="option">
+        <span class="emoji">🌃</span>
+        싱가포르
+      </div>
+    </div>
+
+    <!-- 한국 -->
+    <div style="font-size: 11px; font-weight: 700; color: var(--text-soft); letter-spacing: 0.5px; margin: 22px 0 10px;">🇰🇷 한국</div>
+    <div class="option-grid cols-3">
+      <div class="option">
+        <span class="emoji">🏙️</span>
+        서울
+      </div>
+      <div class="option">
+        <span class="emoji">🌊</span>
+        부산
+      </div>
+      <div class="option">
+        <span class="emoji">🍊</span>
+        제주
+      </div>
+      <div class="option">
+        <span class="emoji">⛱️</span>
+        강릉
+      </div>
+    </div>
+
+    <div style="height: 100px;"></div>
+  </main>
+
+  <div class="cta-fixed">
+    <button class="btn primary">다음 →</button>
+  </div>
+
+  <nav class="bottom-nav">
+    <button class="nav-item"><span class="icon">🏠</span>홈</button>
+    <button class="nav-item active"><span class="icon">📥</span>보관함</button>
+    <button class="nav-item"><span class="icon">📔</span>내 일정</button>
+    <button class="nav-item"><span class="icon">👤</span>프로필</button>
+  </nav>
+
+</div>
+</body>
+</html>

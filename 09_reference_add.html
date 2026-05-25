@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>콘텐츠 담기 — TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="device">
+
+  <!-- 헤더 -->
+  <header class="header">
+    <button class="header-btn">←</button>
+    <div class="header-title">콘텐츠 담기</div>
+    <div class="header-spacer"></div>
+  </header>
+
+  <main class="main">
+
+    <!-- Planning Paradox 후크 -->
+    <h1 class="title">저장만 하던 그 콘텐츠,<br>여기 던지면 일정이 돼요</h1>
+    <p class="subtitle">유튜브·블로그·인스타 링크나 스크린샷을 담아두면, AI가 실제 장소만 뽑아 정리해 둡니다.</p>
+
+    <!-- URL 붙여넣기 -->
+    <div class="paste-bar">
+      <span style="font-size:16px;">🔗</span>
+      <input type="text" placeholder="링크 붙여넣기 (youtube.com / blog.naver.com …)">
+      <button class="btn primary sm" style="width:auto; padding:0 16px;">담기</button>
+    </div>
+
+    <!-- 소스 선택 -->
+    <p class="mini-label" style="margin-top:22px;">어디서 가져올까요?</p>
+    <div class="src-grid">
+      <div class="src-tile">
+        <div class="ico" style="background:#FDE7E7;">▶️</div>
+        <div><div class="nm">YouTube</div><div class="ds">영상 → 동선</div></div>
+      </div>
+      <div class="src-tile">
+        <div class="ico" style="background:#E3F3E6;">📝</div>
+        <div><div class="nm">네이버 블로그</div><div class="ds">글 → 동선</div></div>
+      </div>
+      <div class="src-tile">
+        <div class="ico" style="background:#FCE8F3;">📷</div>
+        <div><div class="nm">스크린샷</div><div class="ds">인스타·핀터레스트 → 장소</div></div>
+      </div>
+      <div class="src-tile">
+        <div class="ico" style="background:var(--bg-soft);">✍️</div>
+        <div><div class="nm">텍스트 붙여넣기</div><div class="ds">카톡·복붙 → 장소</div></div>
+      </div>
+    </div>
+
+    <!-- 공유받기 힌트 -->
+    <div class="share-hint" style="margin-top:14px;">
+      <span style="font-size:18px;">📲</span>
+      <div>인스타·유튜브에서 <b style="color:var(--text);">공유 → TripLog</b> 만 누르면 자동으로 보관함에 담겨요. <span style="color:var(--text-mute);">(Android · iOS는 곧)</span></div>
+    </div>
+
+    <!-- 방금 담은 것 (파싱 중 미리보기) -->
+    <p class="mini-label" style="margin-top:26px;">방금 담은 콘텐츠</p>
+
+    <div class="ref-card">
+      <div class="ref-thumb">
+        <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🗾
+        <span class="play">▶</span>
+      </div>
+      <div class="ref-body">
+        <div class="ref-top">
+          <span class="src-badge youtube">▶️ YouTube</span>
+        </div>
+        <p class="ref-title">오사카 3박4일 vlog — 현지인이 진짜 가는 곳만 모음</p>
+        <div class="ref-foot">
+          <span class="parse-status processing"><span class="dot-pulse"></span>장소 분석 중…</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-thumb">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🍜
+      </div>
+      <div class="ref-body">
+        <div class="ref-top">
+          <span class="src-badge insta">📷 스크린샷</span>
+          <span class="gran-badge place">📍 장소</span>
+        </div>
+        <p class="ref-title">난바 야키니쿠 맛집 (인스타 캡처)</p>
+        <p class="ref-preview">📍 마츠사카규 야키니쿠 M · 오사카 난바</p>
+        <div class="ref-foot">
+          <span class="parse-status done">✓ 담김</span>
+          <span class="verified">✓ 실제 장소 확인</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 90px;"></div>
+  </main>
+
+  <!-- 하단 CTA -->
+  <div class="cta-fixed">
+    <button class="btn primary">📥 내 보관함 보기 (12)</button>
+  </div>
+
+  <!-- 하단 nav -->
+  <nav class="bottom-nav">
+    <button class="nav-item"><span class="icon">🏠</span>홈</button>
+    <button class="nav-item active"><span class="icon">📥</span>보관함</button>
+    <button class="nav-item"><span class="icon">📔</span>내 일정</button>
+    <button class="nav-item"><span class="icon">👤</span>프로필</button>
+  </nav>
+
+</div>
+</body>
+</html>

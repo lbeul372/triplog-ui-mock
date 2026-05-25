@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TripLog AI — 화면 전체보기</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root { --primary:#5DA8C5; --primary-deep:#3D8AAA; --accent:#EA8775; --text:#1f2937; --soft:#6B7280; --border:#E5E7EB; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Pretendard',-apple-system,sans-serif; background:#EEF2F6; color:var(--text); }
+  .top { padding:34px 28px 22px; background:linear-gradient(135deg,#5DA8C5,#7AB9D2 55%,#EA8775 140%); color:#fff; }
+  .top .lg { font-size:13px; font-weight:700; opacity:0.9; letter-spacing:0.5px; }
+  .top h1 { font-size:26px; font-weight:800; margin:6px 0 4px; letter-spacing:-0.5px; }
+  .top p { font-size:13px; opacity:0.92; margin:0; }
+  .wrap { max-width:1200px; margin:0 auto; padding:24px 20px 60px; }
+  .sec-h { display:flex; align-items:center; gap:8px; font-size:16px; font-weight:800; margin:30px 0 4px; letter-spacing:-0.3px; }
+  .sec-h .tag { font-size:10.5px; font-weight:700; padding:3px 9px; border-radius:999px; }
+  .tag.core { background:#FCE9E4; color:#D66951; }
+  .tag.ai { background:#DCEBF5; color:#3D8AAA; }
+  .tag.comm { background:#E3F3E6; color:#2E944A; }
+  .tag.base { background:#EAE7F5; color:#6E5BC2; }
+  .sec-d { font-size:12px; color:var(--soft); margin:2px 0 14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px,1fr)); gap:20px; }
+  .card { background:#fff; border-radius:16px; padding:10px; box-shadow:0 4px 16px rgba(15,23,42,0.07); }
+  .frame { position:relative; width:100%; height:412px; border-radius:12px; overflow:hidden; border:1px solid var(--border); background:#fff; }
+  .frame iframe { width:420px; height:866px; border:0; transform:scale(0.452); transform-origin:top left; pointer-events:none; }
+  .frame a.hit { position:absolute; inset:0; z-index:2; }
+  .cap { display:flex; align-items:baseline; gap:6px; padding:9px 4px 3px; }
+  .cap .no { font-size:11px; font-weight:800; color:var(--primary-deep); }
+  .cap .nm { font-size:13px; font-weight:700; }
+  .cap .ds { font-size:11px; color:var(--soft); margin-left:auto; }
+  .new-dot { width:6px; height:6px; border-radius:50%; background:var(--accent); display:inline-block; margin-left:4px; vertical-align:middle; }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="lg">● TripLog AI</div>
+    <h1>화면 전체보기</h1>
+    <p>여행 콘텐츠 보관함 → AI가 내 일정으로 정리 · 카드를 클릭하면 실제 화면이 열려요</p>
+  </div>
+
+  <div class="wrap">
+
+    <!-- 핵심 루프 -->
+    <div class="sec-h">🆕 핵심 루프 — 콘텐츠 보관함 <span class="tag core">NEW · 우리 차별점</span></div>
+    <div class="sec-d">담기 → 보관함 → 정리 → (조립) → 내 콘텐츠가 개인화 일정으로. 공유받기로 인스타도 흡수.</div>
+    <div class="grid">
+      <div class="card"><div class="frame"><iframe src="09_reference_add.html" scrolling="no"></iframe><a class="hit" href="09_reference_add.html" target="_blank"></a></div><div class="cap"><span class="no">09</span><span class="nm">콘텐츠 담기</span><span class="ds">멀티소스 입력</span></div></div>
+      <div class="card"><div class="frame"><iframe src="10_inbox.html" scrolling="no"></iframe><a class="hit" href="10_inbox.html" target="_blank"></a></div><div class="cap"><span class="no">10</span><span class="nm">보관함</span><span class="ds">레퍼런스 모음</span></div></div>
+      <div class="card"><div class="frame"><iframe src="11_organize.html" scrolling="no"></iframe><a class="hit" href="11_organize.html" target="_blank"></a></div><div class="cap"><span class="no">11</span><span class="nm">정리하기</span><span class="ds">골라서 조립</span></div></div>
+      <div class="card"><div class="frame"><iframe src="13_assemble_loading.html" scrolling="no"></iframe><a class="hit" href="13_assemble_loading.html" target="_blank"></a></div><div class="cap"><span class="no">13</span><span class="nm">조립 중</span><span class="ds">투명한 단계</span></div></div>
+      <div class="card"><div class="frame"><iframe src="12_result_personalized.html" scrolling="no"></iframe><a class="hit" href="12_result_personalized.html" target="_blank"></a></div><div class="cap"><span class="no">12</span><span class="nm">개인화 일정</span><span class="ds">출처+취향</span></div></div>
+      <div class="card"><div class="frame"><iframe src="14_share_receive.html" scrolling="no"></iframe><a class="hit" href="14_share_receive.html" target="_blank"></a></div><div class="cap"><span class="no">14</span><span class="nm">공유 받기</span><span class="ds">인스타→앱</span></div></div>
+    </div>
+
+    <!-- AI 폼 경로 -->
+    <div class="sec-h">✨ AI 맞춤 경로 <span class="tag ai">기존 유지</span></div>
+    <div class="sec-d">콘텐츠 없이도 폼 입력 → AI 생성. 일정 편집·장소 교체(swap).</div>
+    <div class="grid">
+      <div class="card"><div class="frame"><iframe src="02_wizard_city.html" scrolling="no"></iframe><a class="hit" href="02_wizard_city.html" target="_blank"></a></div><div class="cap"><span class="no">02</span><span class="nm">도시 선택</span></div></div>
+      <div class="card"><div class="frame"><iframe src="03_wizard_theme.html" scrolling="no"></iframe><a class="hit" href="03_wizard_theme.html" target="_blank"></a></div><div class="cap"><span class="no">03</span><span class="nm">테마 선택</span></div></div>
+      <div class="card"><div class="frame"><iframe src="04_result_day1.html" scrolling="no"></iframe><a class="hit" href="04_result_day1.html" target="_blank"></a></div><div class="cap"><span class="no">04</span><span class="nm">결과 Day1</span></div></div>
+      <div class="card"><div class="frame"><iframe src="05_result_day2.html" scrolling="no"></iframe><a class="hit" href="05_result_day2.html" target="_blank"></a></div><div class="cap"><span class="no">05</span><span class="nm">결과 Day2</span></div></div>
+      <div class="card"><div class="frame"><iframe src="06_slot_swap.html" scrolling="no"></iframe><a class="hit" href="06_slot_swap.html" target="_blank"></a></div><div class="cap"><span class="no">06</span><span class="nm">장소 교체</span></div></div>
+    </div>
+
+    <!-- 커뮤니티 -->
+    <div class="sec-h">✍️ 기록 & 전파 — 커뮤니티 <span class="tag comm">기존 유지</span></div>
+    <div class="sec-d">다녀와서 여행기 발행 → 친구가 deep-copy (지인추천 디지털화).</div>
+    <div class="grid">
+      <div class="card"><div class="frame"><iframe src="07_travelogue_publish.html" scrolling="no"></iframe><a class="hit" href="07_travelogue_publish.html" target="_blank"></a></div><div class="cap"><span class="no">07</span><span class="nm">여행기 발행</span></div></div>
+      <div class="card"><div class="frame"><iframe src="08_travelogue_detail.html" scrolling="no"></iframe><a class="hit" href="08_travelogue_detail.html" target="_blank"></a></div><div class="cap"><span class="no">08</span><span class="nm">여행기 상세</span><span class="ds">deep copy</span></div></div>
+    </div>
+
+    <!-- 진입/프로필 -->
+    <div class="sec-h">🏠 진입 & 프로필 <span class="tag base">홈 갱신 · 프로필 NEW</span></div>
+    <div class="sec-d">홈은 새 방향(보관함 중심)으로 갱신. 프로필에 내 취향 프로파일 노출.</div>
+    <div class="grid">
+      <div class="card"><div class="frame"><iframe src="01_home.html" scrolling="no"></iframe><a class="hit" href="01_home.html" target="_blank"></a></div><div class="cap"><span class="no">01</span><span class="nm">홈</span><span class="ds">갱신됨</span></div></div>
+      <div class="card"><div class="frame"><iframe src="15_profile.html" scrolling="no"></iframe><a class="hit" href="15_profile.html" target="_blank"></a></div><div class="cap"><span class="no">15</span><span class="nm">프로필 + 취향</span></div></div>
+    </div>
+
+  </div>
+</body>
+</html>

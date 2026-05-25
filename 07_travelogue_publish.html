@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>여행기 발행 — TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="device">
+
+  <header class="header">
+    <button class="header-btn">←</button>
+    <div class="header-title">여행기 발행</div>
+    <button class="header-btn">⋯</button>
+  </header>
+
+  <main class="main">
+
+    <!-- 일정 요약 -->
+    <div class="info-box" style="margin-bottom: 20px;">
+      <span class="label">📔 발행할 일정</span>
+      도쿄 4박5일 · 12 슬롯 · 부모님과 · 널널하게
+    </div>
+
+    <!-- 제목 -->
+    <div class="field">
+      <label class="field-label">제목</label>
+      <input class="input" type="text" value="엄마 아빠 데리고 도쿄, 진짜 잘 다녀왔어요">
+    </div>
+
+    <!-- 본문 -->
+    <div class="field">
+      <label class="field-label">후기</label>
+      <textarea class="textarea" placeholder="다녀온 후기를 자유롭게 적어주세요...">처음엔 부모님 모시고 가는 게 부담됐는데, AI가 history 보고 "여유로운 페이스 좋아하시네요" 라고 알아서 짜줘서 진짜 편했어요. Day 1 메이지 신궁 → 규카츠 → 박물관 흐름이 특히 좋았고요...</textarea>
+    </div>
+
+    <!-- 사진 업로드 -->
+    <div class="field">
+      <label class="field-label">사진 (최대 6장)</label>
+      <div class="photo-grid">
+        <div class="photo-cell">📷</div>
+        <div class="photo-cell">📷</div>
+        <div class="photo-cell">📷</div>
+        <div class="photo-cell">📷</div>
+        <div class="photo-cell">📷</div>
+        <div class="photo-cell add">+</div>
+      </div>
+    </div>
+
+    <!-- 태그 -->
+    <div class="field">
+      <label class="field-label">태그</label>
+      <div class="card" style="padding: 12px;">
+        <span class="chip">#도쿄</span>
+        <span class="chip">#부모님</span>
+        <span class="chip">#문화·역사</span>
+        <span class="chip">#여유롭게</span>
+        <span class="chip coral">#먹방</span>
+        <span class="chip gray" style="border: 1px dashed var(--border); background: transparent;">+ 태그 추가</span>
+      </div>
+    </div>
+
+    <!-- 공개 토글 -->
+    <div class="field">
+      <div class="toggle-row">
+        <div>
+          <div style="font-size: 13px; font-weight: 700;">전체 공개</div>
+          <div style="font-size: 11px; color: var(--text-soft); margin-top: 2px;">다른 여행자가 Deep Copy로 가져갈 수 있어요</div>
+        </div>
+        <div class="toggle"></div>
+      </div>
+    </div>
+
+    <!-- 미리보기 -->
+    <h2 class="section-title">📋 미리보기</h2>
+    <div class="card" style="padding: 0; overflow: hidden;">
+      <div style="height: 80px; background: linear-gradient(135deg, #5DA8C5, #EA8775); padding: 12px; color: #fff; display: flex; align-items: flex-end;">
+        <div style="font-size: 12.5px; font-weight: 700;">엄마 아빠 데리고 도쿄, 진짜 잘 다녀왔어요</div>
+      </div>
+      <div style="padding: 12px;">
+        <div class="author-row" style="margin-bottom: 0;">
+          <span class="ava">J</span>
+          <div>
+            <div class="who">jiwon</div>
+            <div class="when">발행 직전 · 12 슬롯</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 90px;"></div>
+  </main>
+
+  <div class="cta-fixed">
+    <button class="btn coral">✨ 여행기 발행하기</button>
+  </div>
+
+  <nav class="bottom-nav">
+    <button class="nav-item"><span class="icon">🏠</span>홈</button>
+    <button class="nav-item"><span class="icon">📥</span>보관함</button>
+    <button class="nav-item active"><span class="icon">📔</span>내 일정</button>
+    <button class="nav-item"><span class="icon">👤</span>프로필</button>
+  </nav>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>테마 선택 — TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="device">
+
+  <header class="header">
+    <button class="header-btn">←</button>
+    <div class="header-title">AI 맞춤 일정 만들기</div>
+    <div style="font-size: 12px; font-weight: 700; color: var(--primary-deep); width: 36px; text-align: right;">5/5</div>
+  </header>
+
+  <main class="main loose">
+
+    <div class="progress">
+      <div class="progress-fill" style="width: 100%;"></div>
+    </div>
+
+    <h1 class="title">선호하는 스타일은?</h1>
+    <p class="subtitle">관심 있는 테마를 모두 선택해 주세요 · 다중 선택 가능</p>
+
+    <div class="option-grid cols-3">
+      <div class="option selected">
+        <span class="emoji">🍜</span>
+        먹방
+      </div>
+      <div class="option selected">
+        <span class="emoji">🏛️</span>
+        문화·역사
+      </div>
+      <div class="option">
+        <span class="emoji">🌿</span>
+        자연
+      </div>
+      <div class="option">
+        <span class="emoji">🛍️</span>
+        쇼핑
+      </div>
+      <div class="option">
+        <span class="emoji">🛌</span>
+        여유 힐링
+      </div>
+      <div class="option">
+        <span class="emoji">📷</span>
+        SNS 핫플
+      </div>
+      <div class="option">
+        <span class="emoji">🎵</span>
+        음악·공연
+      </div>
+      <div class="option">
+        <span class="emoji">🎢</span>
+        액티비티
+      </div>
+      <div class="option">
+        <span class="emoji">🏯</span>
+        전통 체험
+      </div>
+    </div>
+
+    <!-- 선택 요약 -->
+    <h2 class="section-title">📋 선택하신 조건</h2>
+    <div class="card" style="background: var(--bg-soft); border: 0;">
+      <div style="display: flex; flex-wrap: wrap; gap: 0;">
+        <span class="chip">🗾 도쿄</span>
+        <span class="chip">4박 5일</span>
+        <span class="chip">부모님과</span>
+        <span class="chip">널널하게</span>
+        <span class="chip coral">🍜 먹방</span>
+        <span class="chip coral">🏛️ 문화·역사</span>
+      </div>
+      <div style="margin-top: 10px; font-size: 11.5px; color: var(--text-soft); line-height: 1.55;">
+        💡 jiwon님의 동남아 여행 4회 history도 함께 분석되어 개인화됩니다
+      </div>
+    </div>
+
+    <div style="height: 100px;"></div>
+  </main>
+
+  <div class="cta-fixed">
+    <button class="btn primary">✨ AI 일정 만들기</button>
+  </div>
+
+  <nav class="bottom-nav">
+    <button class="nav-item"><span class="icon">🏠</span>홈</button>
+    <button class="nav-item active"><span class="icon">📥</span>보관함</button>
+    <button class="nav-item"><span class="icon">📔</span>내 일정</button>
+    <button class="nav-item"><span class="icon">👤</span>프로필</button>
+  </nav>
+
+</div>
+</body>
+</html>

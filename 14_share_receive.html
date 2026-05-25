@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>공유 받기 — TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  /* 다른 앱(인스타)에서 공유 → 우리 앱이 받는 순간: 딤 처리된 배경 + 바텀시트 */
+  .share-backdrop {
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(15,23,42,0.55), rgba(15,23,42,0.78)),
+      url('https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&auto=format&fit=crop&q=80');
+    background-size:cover; background-position:center;
+  }
+  .share-backdrop .src-app {
+    position:absolute; top:18px; left:50%; transform:translateX(-50%);
+    color:#fff; font-size:12px; font-weight:700; opacity:0.85;
+    display:flex; align-items:center; gap:6px;
+  }
+  .sheet {
+    position:absolute; left:0; right:0; bottom:0;
+    background:var(--bg); border-radius:22px 22px 0 0;
+    padding:10px 20px 26px; box-shadow:0 -10px 40px rgba(0,0,0,0.25);
+  }
+  .sheet-grip { width:40px; height:4px; border-radius:999px; background:var(--border); margin:0 auto 16px; }
+  .sheet-app { display:flex; align-items:center; gap:8px; margin-bottom:16px; }
+  .sheet-app .lg { font-weight:800; color:var(--primary-deep); font-size:15px; display:flex; align-items:center; gap:5px; }
+  .sheet-app .lg .dot { width:7px; height:7px; border-radius:50%; background:var(--accent); }
+</style>
+</head>
+<body>
+<div class="device">
+
+  <!-- 인스타에서 공유한 순간 (딤 배경) -->
+  <div class="share-backdrop">
+    <div class="src-app">📷 Instagram 에서 공유 중…</div>
+  </div>
+
+  <!-- 바텀시트 -->
+  <div class="sheet">
+    <div class="sheet-grip"></div>
+    <div class="sheet-app">
+      <span class="lg"><span class="dot"></span>TripLog AI 에 담기</span>
+      <span style="margin-left:auto; font-size:11px; color:var(--text-soft);">@jiwon</span>
+    </div>
+
+    <!-- 받은 콘텐츠 미리보기 -->
+    <div class="ref-card" style="box-shadow:none; background:var(--bg-soft);">
+      <div class="ref-thumb">
+        <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🥩
+      </div>
+      <div class="ref-body">
+        <div class="ref-top">
+          <span class="src-badge insta">📷 인스타</span>
+          <span class="gran-badge place">📍 장소</span>
+        </div>
+        <p class="ref-title" style="-webkit-line-clamp:1;">난바 야키니쿠 인생맛집 🔥 #오사카</p>
+        <div class="ref-foot">
+          <span class="verified">✓ 마츠사카규 야키니쿠 M 로 인식</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 인식 결과 -->
+    <div class="info-box" style="margin-top:14px;">
+      <span class="label">✨ 자동 인식</span>
+      게시물에서 <b>장소 1곳</b>을 찾았어요. 실제로 존재하는 곳인지 확인까지 마쳤습니다 (환각 0).
+    </div>
+
+    <!-- 액션 -->
+    <button class="btn primary" style="margin-top:16px;">📥 내 보관함에 담기</button>
+    <button class="btn ghost" style="margin-top:8px;">+ 지금 짜는 일정에 바로 추가</button>
+    <p style="text-align:center; font-size:10.5px; color:var(--text-mute); margin:14px 0 0;">로그인된 내 계정(@jiwon) 보관함에 저장돼요</p>
+  </div>
+
+</div>
+</body>
+</html>

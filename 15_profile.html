@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프로필 — TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .prof-head { display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+  .prof-ava {
+    width:64px; height:64px; border-radius:50%;
+    background:linear-gradient(135deg, var(--primary), var(--accent));
+    color:#fff; font-size:26px; font-weight:800;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .prof-stats { display:flex; gap:18px; margin-top:6px; }
+  .prof-stats .s { text-align:center; }
+  .prof-stats .s b { display:block; font-size:16px; font-weight:800; }
+  .prof-stats .s span { font-size:10.5px; color:var(--text-soft); }
+  .seg { display:flex; gap:6px; background:var(--bg-soft); padding:4px; border-radius:12px; margin:18px 0 16px; }
+  .seg button { flex:1; border:0; background:transparent; font-family:inherit; font-size:12.5px; font-weight:700; color:var(--text-soft); padding:8px; border-radius:9px; cursor:pointer; }
+  .seg button.on { background:var(--bg); color:var(--primary-deep); box-shadow:var(--shadow-sm); }
+</style>
+</head>
+<body>
+<div class="device">
+
+  <header class="header">
+    <div class="header-title" style="text-align:left; margin-left:4px;">프로필</div>
+    <div class="header-spacer" style="flex:1;"></div>
+    <button class="header-btn">⚙️</button>
+  </header>
+
+  <main class="main">
+
+    <!-- 프로필 헤드 -->
+    <div class="prof-head">
+      <div class="prof-ava">J</div>
+      <div style="flex:1;">
+        <div style="font-size:18px; font-weight:800;">jiwon</div>
+        <div class="prof-stats">
+          <div class="s"><b>7</b><span>여행</span></div>
+          <div class="s"><b>128</b><span>팔로워</span></div>
+          <div class="s"><b>43</b><span>팔로잉</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 내 취향 프로파일 (개인화 narrative 정면) -->
+    <div class="persona-box">
+      <div class="ttl">🧠 내 취향 프로파일</div>
+      <div class="persona-traits">
+        <span class="trait">🍜 음식<span class="pct">72%</span></span>
+        <span class="trait">🌃 야경<span class="pct">38%</span></span>
+        <span class="trait">🛍️ 쇼핑<span class="pct">25%</span></span>
+        <span class="trait">🌿 자연<span class="pct">18%</span></span>
+      </div>
+      <p style="font-size:11px; color:var(--text-soft); margin:10px 0 0; line-height:1.5;">
+        여행 <b>7회</b> · 보관함 <b>10곳</b> · 장소 교체 <b>7회</b>를 학습했어요. 저장할수록 더 정확해집니다.
+      </p>
+    </div>
+
+    <!-- 세그먼트 -->
+    <div class="seg">
+      <button class="on">📔 내 일정</button>
+      <button>✍️ 여행기</button>
+      <button>📥 보관함</button>
+    </div>
+
+    <!-- 내 일정 목록 -->
+    <div class="ref-card" style="align-items:center;">
+      <div class="ref-thumb" style="width:60px; height:60px;">
+        <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🗾
+      </div>
+      <div class="ref-body">
+        <p class="ref-title" style="-webkit-line-clamp:1; margin-bottom:3px;">오사카 3박4일 — 내 취향 일정</p>
+        <div class="ref-foot" style="margin-top:0;">
+          <span class="from-src">✨ 보관함에서 정리</span>
+          <span style="font-size:11px; color:var(--text-soft);">3일 전</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-card" style="align-items:center;">
+      <div class="ref-thumb" style="width:60px; height:60px;">
+        <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🗼
+      </div>
+      <div class="ref-body">
+        <p class="ref-title" style="-webkit-line-clamp:1; margin-bottom:3px;">부모님과 여유로운 도쿄 4박5일</p>
+        <div class="ref-foot" style="margin-top:0;">
+          <span class="from-src">✍️ 여행기 발행됨</span>
+          <span style="font-size:11px; color:var(--text-soft);">2주 전 · ❤️ 234</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팔로우 = 지인추천 -->
+    <h2 class="section-title">👥 팔로우 중인 여행자</h2>
+    <div style="display:flex; gap:14px; overflow-x:auto; padding-bottom:4px;">
+      <div style="text-align:center; flex-shrink:0;">
+        <div class="prof-ava" style="width:52px; height:52px; font-size:20px; margin:0 auto 5px;">Y</div>
+        <div style="font-size:11px; font-weight:600;">yuri</div>
+      </div>
+      <div style="text-align:center; flex-shrink:0;">
+        <div class="prof-ava" style="width:52px; height:52px; font-size:20px; margin:0 auto 5px; background:linear-gradient(135deg,#8E7BD9,#5BB5A8);">M</div>
+        <div style="font-size:11px; font-weight:600;">minho</div>
+      </div>
+      <div style="text-align:center; flex-shrink:0;">
+        <div class="prof-ava" style="width:52px; height:52px; font-size:20px; margin:0 auto 5px; background:linear-gradient(135deg,#EA8775,#F4B860);">S</div>
+        <div style="font-size:11px; font-weight:600;">sumin</div>
+      </div>
+      <div style="text-align:center; flex-shrink:0;">
+        <div style="width:52px; height:52px; border-radius:50%; border:1.5px dashed var(--border); display:flex; align-items:center; justify-content:center; font-size:20px; color:var(--text-mute); margin:0 auto 5px;">＋</div>
+        <div style="font-size:11px; color:var(--text-soft);">찾기</div>
+      </div>
+    </div>
+
+    <div style="height: 24px;"></div>
+  </main>
+
+  <!-- 하단 nav -->
+  <nav class="bottom-nav">
+    <button class="nav-item"><span class="icon">🏠</span>홈</button>
+    <button class="nav-item"><span class="icon">📥</span>보관함</button>
+    <button class="nav-item"><span class="icon">📔</span>내 일정</button>
+    <button class="nav-item active"><span class="icon">👤</span>프로필</button>
+  </nav>
+
+</div>
+</body>
+</html>

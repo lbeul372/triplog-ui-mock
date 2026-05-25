@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오사카 3박4일 — 내 취향 일정 · TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="device">
+
+  <!-- 헤더 -->
+  <header class="header">
+    <button class="header-btn">←</button>
+    <div class="header-title">오사카 3박4일 일정</div>
+    <button class="header-btn">⤴</button>
+  </header>
+
+  <main class="main">
+
+    <!-- 개인화 박스 -->
+    <div class="persona-box">
+      <div class="ttl">✨ 당신의 취향이 반영됐어요</div>
+      <div class="persona-traits">
+        <span class="trait">🍜 음식<span class="pct">72%</span></span>
+        <span class="trait">🌃 야경<span class="pct">38%</span></span>
+        <span class="trait">🛍️ 쇼핑<span class="pct">25%</span></span>
+        <span class="trait">👫 친구와</span>
+        <span class="trait">🐢 널널하게</span>
+      </div>
+      <p style="font-size:11px; color:var(--text-soft); margin:9px 0 0; line-height:1.5;">
+        지난 여행 <b>4회</b> + 보관함 <b>10곳</b> 분석 — 음식 비중이 높아 식사 슬롯을 강화하고, 야키니쿠 맛집을 저녁에 배치했어요.
+      </p>
+    </div>
+
+    <!-- 지도 -->
+    <div class="map-box" style="margin-top:16px;">
+      <svg class="map-svg-bg" viewBox="0 0 420 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <rect width="420" height="200" fill="#E8F1F7"/>
+        <path d="M300,200 L420,200 L420,120 Q360,135 330,160 Q315,180 300,200 Z" fill="#C9DDEB" opacity="0.8"/>
+        <path d="M0,0 L420,0 L420,120 Q360,134 330,158 Q314,180 300,200 L0,200 Z" fill="#F2EAE7" opacity="0.5"/>
+        <path d="M210,0 Q220,50 214,90 Q208,130 226,170 Q236,188 244,200" stroke="#B5D4E5" stroke-width="3" fill="none" opacity="0.7"/>
+        <g stroke="#D9DEE3" stroke-width="0.8" opacity="0.5">
+          <line x1="0" y1="55" x2="420" y2="55"/>
+          <line x1="0" y1="110" x2="420" y2="110"/>
+          <line x1="110" y1="0" x2="110" y2="200"/>
+          <line x1="220" y1="0" x2="220" y2="200"/>
+        </g>
+        <ellipse cx="250" cy="70" rx="34" ry="22" fill="#CFE3CC" opacity="0.6"/>
+        <path d="M120,120 L170,95 L250,75 L200,150" stroke="#5DA8C5" stroke-width="2" stroke-dasharray="4 4" fill="none" opacity="0.7"/>
+        <text x="120" y="140" font-family="Pretendard, sans-serif" font-size="9" fill="#6B7280" font-weight="700" text-anchor="middle" opacity="0.8">난바</text>
+        <text x="255" y="60" font-family="Pretendard, sans-serif" font-size="9" fill="#6B7280" font-weight="700" text-anchor="middle" opacity="0.8">오사카성</text>
+        <text x="380" y="95" font-family="Pretendard, sans-serif" font-size="11" fill="#3D8AAA" font-weight="800" text-anchor="middle" opacity="0.85">오사카</text>
+      </svg>
+      <div class="map-pins">
+        <div class="map-pin v" style="left: 60%; top: 38%;">1</div>
+        <div class="map-pin c" style="left: 29%; top: 60%;">2</div>
+        <div class="map-pin p" style="left: 41%; top: 48%;">3</div>
+        <div class="map-pin c" style="left: 48%; top: 75%;">4</div>
+      </div>
+      <div class="map-attribution">© TripLog · 지도 mock</div>
+    </div>
+
+    <!-- 일자 탭 -->
+    <div class="day-tabs">
+      <button class="day-tab active">Day 1</button>
+      <button class="day-tab">Day 2</button>
+      <button class="day-tab">Day 3</button>
+      <button class="day-tab">Day 4</button>
+    </div>
+
+    <p class="mini-label">🗺️ 동선은 영상, 📍 맛집은 당신이 저장한 곳에서 가져왔어요</p>
+
+    <!-- 슬롯 1 — 영상 출처 -->
+    <div class="slot">
+      <div class="slot-pin purple">1</div>
+      <div class="slot-thumb"><img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🏯</div>
+      <div class="slot-body">
+        <div class="slot-time">⏰ 10:00 · MORNING</div>
+        <h3 class="slot-title">오사카성</h3>
+        <p class="slot-meta">관광명소 · 오사카성권</p>
+        <div class="slot-divider"></div>
+        <p class="slot-recommend"><span class="label">추천</span>천수각 전망과 공원 산책, 오전 햇살에 사진 맛집</p>
+        <div class="slot-actions">
+          <span class="from-src">▶️ 영상에서</span>
+          <span class="verified">✓ 실제 장소</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 슬롯 2 — 인스타 저장 출처 (점심) -->
+    <div class="slot">
+      <div class="slot-pin coral">2</div>
+      <div class="slot-thumb"><img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🥩</div>
+      <div class="slot-body">
+        <div class="slot-time">⏰ 12:30 · LUNCH</div>
+        <h3 class="slot-title">마츠사카규 야키니쿠 M</h3>
+        <p class="slot-meta">음식점 · 난바권</p>
+        <div class="slot-divider"></div>
+        <p class="slot-recommend"><span class="label">추천</span>당신이 인스타에 저장한 곳 — 음식 선호 72%에 딱 맞아 점심에 배치</p>
+        <div class="slot-actions">
+          <span class="from-src">📷 내가 저장한 인스타</span>
+          <span class="verified">✓ 실제 장소</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 슬롯 3 — 취향 추천 (보강) -->
+    <div class="slot">
+      <div class="slot-pin">3</div>
+      <div class="slot-thumb"><img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🛍️</div>
+      <div class="slot-body">
+        <div class="slot-time">⏰ 15:00 · AFTERNOON</div>
+        <h3 class="slot-title">신사이바시 상점가</h3>
+        <p class="slot-meta">쇼핑 · 신사이바시권</p>
+        <div class="slot-divider"></div>
+        <p class="slot-recommend"><span class="label">추천</span>동선 사이 빈 시간을 채운 AI 추천 — 쇼핑 취향 반영</p>
+        <div class="slot-actions">
+          <span class="from-src">✨ 취향 추천</span>
+          <span class="verified">✓ 실제 장소</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 식사 sub-section -->
+    <div class="sub-section">
+      <span class="ico">🍴</span>
+      <span class="text">Day 1 저녁 · 야경</span>
+    </div>
+
+    <!-- 슬롯 4 — 텍스트 저장 출처 -->
+    <div class="slot">
+      <div class="slot-pin coral">4</div>
+      <div class="slot-thumb"><img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">☕</div>
+      <div class="slot-body">
+        <div class="slot-time">⏰ 19:30 · DINNER</div>
+        <h3 class="slot-title">LiLo Coffee Roasters</h3>
+        <p class="slot-meta">카페 · 아메리카무라권</p>
+        <div class="slot-divider"></div>
+        <p class="slot-recommend"><span class="label">추천</span>친구가 카톡으로 추천한 곳 — 야경 스팟 근처라 저녁 동선에 연결</p>
+        <div class="slot-actions">
+          <span class="from-src">✍️ 텍스트에서</span>
+          <span class="verified">✓ 실제 장소</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 80px;"></div>
+  </main>
+
+  <!-- 하단 CTA -->
+  <div class="cta-fixed">
+    <button class="btn primary">📥 내 일정으로 저장</button>
+  </div>
+
+  <!-- 하단 nav -->
+  <nav class="bottom-nav">
+    <button class="nav-item"><span class="icon">🏠</span>홈</button>
+    <button class="nav-item"><span class="icon">📥</span>보관함</button>
+    <button class="nav-item active"><span class="icon">📔</span>내 일정</button>
+    <button class="nav-item"><span class="icon">👤</span>프로필</button>
+  </nav>
+
+</div>
+</body>
+</html>

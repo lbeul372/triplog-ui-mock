@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>일정 짜는 중 — TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .load-wrap { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:78vh; text-align:center; padding: 0 28px; }
+  .spinner {
+    width:64px; height:64px; border-radius:50%;
+    border:5px solid var(--primary-soft); border-top-color:var(--primary);
+    animation: spin 0.9s linear infinite; margin-bottom:24px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .steps { width:100%; margin-top:28px; text-align:left; }
+  .step { display:flex; align-items:center; gap:10px; padding:11px 0; font-size:13px; }
+  .step + .step { border-top:1px solid var(--border-soft); }
+  .step .mk { width:22px; height:22px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; }
+  .step.done .mk { background:var(--success); color:#fff; }
+  .step.now .mk { background:var(--primary); color:#fff; }
+  .step.wait .mk { background:var(--bg-soft); color:var(--text-mute); border:1px solid var(--border); }
+  .step.done .tx { color:var(--text); }
+  .step.now .tx { color:var(--text); font-weight:700; }
+  .step.wait .tx { color:var(--text-mute); }
+  .step .tx b { color: var(--primary-deep); }
+</style>
+</head>
+<body>
+<div class="device">
+
+  <header class="header">
+    <button class="header-btn">✕</button>
+    <div class="header-title">일정 만드는 중</div>
+    <div class="header-spacer"></div>
+  </header>
+
+  <main class="main">
+    <div class="load-wrap">
+      <div class="spinner"></div>
+      <h1 class="title" style="font-size:20px;">당신의 콘텐츠로<br>일정을 짜고 있어요</h1>
+      <p class="subtitle" style="margin-top:6px;">오사카 3박4일 · 보관함 3개 + 내 취향 반영</p>
+
+      <div class="steps">
+        <div class="step done">
+          <span class="mk">✓</span>
+          <span class="tx">레퍼런스 3개에서 <b>장소 10곳</b> 추출</span>
+        </div>
+        <div class="step done">
+          <span class="mk">✓</span>
+          <span class="tx">Google Places로 <b>실제 장소 검증</b> (10/10 ✓ 환각 0)</span>
+        </div>
+        <div class="step now">
+          <span class="mk">3</span>
+          <span class="tx">내 취향(<b>음식 72%</b>) 반영해 동선 최적화…</span>
+        </div>
+        <div class="step wait">
+          <span class="mk">4</span>
+          <span class="tx">3박4일 시간대별 슬롯 배치</span>
+        </div>
+      </div>
+
+      <p style="font-size:11px; color:var(--text-mute); margin-top:24px;">보통 10~15초 걸려요 ⏱️</p>
+    </div>
+  </main>
+
+</div>
+</body>
+</html>

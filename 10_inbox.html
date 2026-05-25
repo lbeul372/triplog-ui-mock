@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>내 보관함 — TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="device">
+
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="header-logo"><span class="dot"></span>내 보관함</div>
+    <div class="header-spacer" style="flex:1;"></div>
+    <button class="header-btn">＋</button>
+  </header>
+
+  <main class="main">
+
+    <!-- 요약 -->
+    <div style="display:flex; align-items:baseline; gap:8px; margin-bottom:14px;">
+      <h1 class="title" style="margin:0;">12개 저장됨</h1>
+      <span style="font-size:12.5px; color:var(--text-soft);">· 10개 정리 준비됨</span>
+    </div>
+
+    <!-- 필터 chip -->
+    <div class="day-tabs">
+      <button class="day-tab active">전체 12</button>
+      <button class="day-tab">🗺️ 동선 4</button>
+      <button class="day-tab">📍 장소 6</button>
+      <button class="day-tab">⏳ 분석중 2</button>
+    </div>
+
+    <!-- 레퍼런스 카드들 -->
+
+    <div class="ref-card">
+      <div class="ref-thumb">
+        <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🗾
+        <span class="play">▶</span>
+      </div>
+      <div class="ref-body">
+        <div class="ref-top">
+          <span class="src-badge youtube">▶️ YouTube</span>
+          <span class="gran-badge route">🗺️ 동선 8곳</span>
+        </div>
+        <p class="ref-title">오사카 3박4일 — 현지인이 진짜 가는 곳만</p>
+        <p class="ref-preview">도톤보리 · 신세카이 · 오사카성 · 구로몬시장 …</p>
+        <div class="ref-foot">
+          <span class="parse-status done">✓ 분석완료</span>
+          <span class="verified">✓ 8/8 실제 장소</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-thumb">
+        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🍁
+      </div>
+      <div class="ref-body">
+        <div class="ref-top">
+          <span class="src-badge blog">📝 블로그</span>
+          <span class="gran-badge route">🗺️ 동선 5곳</span>
+        </div>
+        <p class="ref-title">교토 단풍 명소 완벽 코스 (네이버 블로그)</p>
+        <p class="ref-preview">기요미즈데라 · 아라시야마 · 도게츠교 …</p>
+        <div class="ref-foot">
+          <span class="parse-status done">✓ 분석완료</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-thumb">
+        <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🥩
+      </div>
+      <div class="ref-body">
+        <div class="ref-top">
+          <span class="src-badge insta">📷 스크린샷</span>
+          <span class="gran-badge place">📍 장소</span>
+        </div>
+        <p class="ref-title">난바 야키니쿠 맛집 (인스타 캡처)</p>
+        <p class="ref-preview">📍 마츠사카규 야키니쿠 M · 오사카 난바</p>
+        <div class="ref-foot">
+          <span class="parse-status done">✓ 담김</span>
+          <span class="verified">✓ 실제 장소</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-thumb">☕</div>
+      <div class="ref-body">
+        <div class="ref-top">
+          <span class="src-badge text">✍️ 텍스트</span>
+          <span class="gran-badge place">📍 장소</span>
+        </div>
+        <p class="ref-title">친구가 카톡으로 추천한 카페</p>
+        <p class="ref-preview">📍 LiLo Coffee Roasters · 오사카 아메리카무라</p>
+        <div class="ref-foot">
+          <span class="parse-status done">✓ 담김</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-thumb">
+        <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🎬
+        <span class="play">▶</span>
+      </div>
+      <div class="ref-body">
+        <div class="ref-top">
+          <span class="src-badge youtube">▶️ YouTube</span>
+        </div>
+        <p class="ref-title">오사카 야경 스팟 TOP5</p>
+        <div class="ref-foot">
+          <span class="parse-status processing"><span class="dot-pulse"></span>장소 분석 중…</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 96px;"></div>
+  </main>
+
+  <!-- 하단 CTA -->
+  <div class="cta-fixed">
+    <button class="btn primary">✨ 정리해서 일정 만들기 (10)</button>
+  </div>
+
+  <!-- 하단 nav -->
+  <nav class="bottom-nav">
+    <button class="nav-item"><span class="icon">🏠</span>홈</button>
+    <button class="nav-item active"><span class="icon">📥</span>보관함</button>
+    <button class="nav-item"><span class="icon">📔</span>내 일정</button>
+    <button class="nav-item"><span class="icon">👤</span>프로필</button>
+  </nav>
+
+</div>
+</body>
+</html>

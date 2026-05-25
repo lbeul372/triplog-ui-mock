@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>장소 상세 · 메이지 신궁 — TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="device">
+
+  <header class="header">
+    <button class="header-btn">←</button>
+    <div class="header-title">장소 상세</div>
+    <button class="header-btn">⤴</button>
+  </header>
+
+  <main class="main">
+
+    <!-- 큰 사진 (메이지 신궁) -->
+    <div class="detail-photo"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&auto=format&fit=crop&q=80" alt="메이지 신궁" onerror="this.remove()">⛩️</div>
+
+    <h1 class="title">메이지 신궁</h1>
+
+    <div class="detail-meta">
+      <span class="badge">관광명소</span>
+      <span>시부야권</span>
+      <span>·</span>
+      <span class="star">★ 4.7</span>
+      <span>·</span>
+      <span>09:00 – 17:00</span>
+    </div>
+
+    <!-- AI 추천 근거 -->
+    <div class="info-box" style="margin-bottom: 20px;">
+      <span class="label">💡 AI 추천 근거 — 왜 이 장소인가?</span>
+      jiwon님 history 분석 결과 <strong>자연·산책 선호 패턴</strong>이 강하게 잡혔습니다.
+      부모님 동행 + 널널한 페이스 조건과 매칭되는 평온한 코스로,
+      Day 1 오전 동선의 첫 슬롯으로 최적화되었습니다.
+    </div>
+
+    <!-- 액션 -->
+    <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+      <button class="btn dark-ghost sm" style="flex: 1;">📍 장소 저장</button>
+      <button class="btn primary sm" style="flex: 1;">🔄 이걸로 교체</button>
+    </div>
+
+    <!-- 대안 -->
+    <h2 class="section-title">🔄 다른 추천 장소 (2)</h2>
+    <p style="font-size: 11.5px; color: var(--text-soft); margin: -8px 0 14px;">동일한 추천 조건에서 RAG가 함께 제안한 후보입니다</p>
+
+    <div class="alt-row">
+      <div class="thumb"><img src="https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?w=140&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🌳</div>
+      <div class="body">
+        <div class="title">우에노 공원</div>
+        <div class="meta">관광명소 · 우에노권 · ★ 4.5</div>
+      </div>
+      <button class="btn ghost sm" style="width: auto; padding: 0 14px;">선택</button>
+    </div>
+
+    <div class="alt-row">
+      <div class="thumb"><img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=140&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🌸</div>
+      <div class="body">
+        <div class="title">하마리큐 은사정원</div>
+        <div class="meta">관광명소 · 하마리큐권 · ★ 4.6</div>
+      </div>
+      <button class="btn ghost sm" style="width: auto; padding: 0 14px;">선택</button>
+    </div>
+
+    <!-- 영업·접근성 -->
+    <h2 class="section-title">📌 기본 정보</h2>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 12.5px;">
+        <span style="color: var(--text-soft);">영업시간</span>
+        <span style="font-weight: 600;">09:00 – 17:00 (연중무휴)</span>
+      </div>
+      <div style="height: 1px; background: var(--border-soft); margin: 6px 0;"></div>
+      <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 12.5px;">
+        <span style="color: var(--text-soft);">소요시간</span>
+        <span style="font-weight: 600;">약 1.5h</span>
+      </div>
+      <div style="height: 1px; background: var(--border-soft); margin: 6px 0;"></div>
+      <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 12.5px;">
+        <span style="color: var(--text-soft);">입장료</span>
+        <span style="font-weight: 600;">무료</span>
+      </div>
+      <div style="height: 1px; background: var(--border-soft); margin: 6px 0;"></div>
+      <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 12.5px;">
+        <span style="color: var(--text-soft);">접근성</span>
+        <span style="font-weight: 600;">JR 하라주쿠역 도보 1분</span>
+      </div>
+    </div>
+
+    <div style="height: 80px;"></div>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="nav-item"><span class="icon">🏠</span>홈</button>
+    <button class="nav-item"><span class="icon">📥</span>보관함</button>
+    <button class="nav-item active"><span class="icon">📔</span>내 일정</button>
+    <button class="nav-item"><span class="icon">👤</span>프로필</button>
+  </nav>
+
+</div>
+</body>
+</html>

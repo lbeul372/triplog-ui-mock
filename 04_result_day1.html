@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>도쿄 4박5일 일정 — Day 1 · TripLog AI</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="device">
+
+  <!-- 헤더 -->
+  <header class="header">
+    <button class="header-btn">←</button>
+    <div class="header-title">도쿄 4박5일 일정</div>
+    <button class="header-btn">⤴</button>
+  </header>
+
+  <main class="main">
+
+    <!-- 지도 영역 (도쿄 + Day 1 시부야권 핀) -->
+    <div class="map-box flat">
+      <svg class="map-svg-bg" viewBox="0 0 420 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <!-- 바다 영역 -->
+        <rect width="420" height="200" fill="#E8F1F7"/>
+        <!-- 도쿄만 -->
+        <path d="M280,200 L420,200 L420,140 Q360,150 320,170 Q300,185 280,200 Z" fill="#C9DDEB" opacity="0.8"/>
+        <!-- 도쿄 23구 외곽 (러프) -->
+        <path d="M0,0 L420,0 L420,140 Q360,148 320,168 Q298,184 280,200 L0,200 Z" fill="#F2EAE7" opacity="0.55"/>
+        <!-- 강 (스미다강) -->
+        <path d="M250,0 Q260,40 256,80 Q252,120 270,160 Q280,180 290,200" stroke="#B5D4E5" stroke-width="3" fill="none" opacity="0.7"/>
+        <!-- 도로 격자 -->
+        <g stroke="#D9DEE3" stroke-width="0.8" opacity="0.5">
+          <line x1="0" y1="50" x2="420" y2="50"/>
+          <line x1="0" y1="100" x2="420" y2="100"/>
+          <line x1="0" y1="150" x2="280" y2="150"/>
+          <line x1="80" y1="0" x2="80" y2="200"/>
+          <line x1="160" y1="0" x2="160" y2="200"/>
+          <line x1="240" y1="0" x2="240" y2="200"/>
+          <line x1="320" y1="0" x2="320" y2="140"/>
+        </g>
+        <!-- 공원 (요요기/메이지신궁 영역) -->
+        <ellipse cx="120" cy="105" rx="42" ry="28" fill="#CFE3CC" opacity="0.6"/>
+        <!-- 공원 (우에노) -->
+        <ellipse cx="280" cy="60" rx="28" ry="20" fill="#CFE3CC" opacity="0.6"/>
+        <!-- Day 1 동선 dashed line -->
+        <path d="M120,110 L180,150 L290,70 L240,130" stroke="#5DA8C5" stroke-width="2" stroke-dasharray="4 4" fill="none" opacity="0.7"/>
+        <!-- 라벨 -->
+        <text x="120" y="80" font-family="Pretendard, sans-serif" font-size="9" fill="#6B7280" font-weight="700" text-anchor="middle" opacity="0.8">시부야</text>
+        <text x="280" y="36" font-family="Pretendard, sans-serif" font-size="9" fill="#6B7280" font-weight="700" text-anchor="middle" opacity="0.8">우에노</text>
+        <text x="240" y="158" font-family="Pretendard, sans-serif" font-size="9" fill="#6B7280" font-weight="700" text-anchor="middle" opacity="0.8">신주쿠</text>
+        <text x="380" y="100" font-family="Pretendard, sans-serif" font-size="11" fill="#3D8AAA" font-weight="800" text-anchor="middle" opacity="0.85">도쿄</text>
+      </svg>
+      <div class="map-pins">
+        <div class="map-pin p" style="left: 28%; top: 55%;">1</div>
+        <div class="map-pin p" style="left: 43%; top: 75%;">2</div>
+        <div class="map-pin v" style="left: 69%; top: 35%;">3</div>
+        <div class="map-pin c" style="left: 57%; top: 65%;">4</div>
+        <div class="map-pin c" style="left: 50%; top: 88%;">5</div>
+      </div>
+      <div class="map-attribution">© TripLog · 지도 mock</div>
+    </div>
+
+    <!-- 일자 탭 -->
+    <div class="day-tabs">
+      <button class="day-tab active">Day 1</button>
+      <button class="day-tab">Day 2</button>
+      <button class="day-tab">Day 3</button>
+      <button class="day-tab">Day 4</button>
+      <button class="day-tab">Day 5</button>
+    </div>
+
+    <!-- 요약 chip 줄 -->
+    <div style="margin-bottom: 18px;">
+      <span class="chip">🗾 도쿄</span>
+      <span class="chip coral">4박 5일</span>
+      <span class="chip gray">부모님과 · 널널하게</span>
+    </div>
+
+    <!-- 슬롯 1 -->
+    <div class="slot">
+      <div class="slot-pin">1</div>
+      <div class="slot-thumb"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">⛩️</div>
+      <div class="slot-body">
+        <div class="slot-time">⏰ 09:30 · MORNING</div>
+        <h3 class="slot-title">메이지 신궁</h3>
+        <p class="slot-meta">관광명소 · 시부야권</p>
+        <div class="slot-divider"></div>
+        <p class="slot-recommend"><span class="label">추천</span>자연 속 고요한 휴식, 산책로와 신사 본전을 천천히 둘러보기 좋은 코스</p>
+        <div class="slot-actions">
+          <span class="slot-chip">🔄 다른 곳 보기</span>
+          <span class="slot-chip">📍 저장</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 슬롯 2 -->
+    <div class="slot">
+      <div class="slot-pin">2</div>
+      <div class="slot-thumb"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🍱</div>
+      <div class="slot-body">
+        <div class="slot-time">⏰ 12:30 · LUNCH</div>
+        <h3 class="slot-title">규카츠 모토무라 하라주쿠점</h3>
+        <p class="slot-meta">음식점 · 하라주쿠권</p>
+        <div class="slot-divider"></div>
+        <p class="slot-recommend"><span class="label">추천</span>바삭한 튀김옷의 규카츠 정식, 부모님 모시기 좋은 차분한 자리</p>
+        <div class="slot-actions">
+          <span class="slot-chip">🔄 다른 곳 보기</span>
+          <span class="slot-chip">📍 저장</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 슬롯 3 -->
+    <div class="slot">
+      <div class="slot-pin purple">3</div>
+      <div class="slot-thumb"><img src="https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🏛️</div>
+      <div class="slot-body">
+        <div class="slot-time">⏰ 15:00 · AFTERNOON</div>
+        <h3 class="slot-title">도쿄 국립박물관</h3>
+        <p class="slot-meta">관광명소 · 우에노권</p>
+        <div class="slot-divider"></div>
+        <p class="slot-recommend"><span class="label">추천</span>일본 미술과 역사를 한눈에, 문화·역사 선호도 높은 분께 강추</p>
+        <div class="slot-actions">
+          <span class="slot-chip">🔄 다른 곳 보기</span>
+          <span class="slot-chip">📍 저장</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 식사 추천 sub-section -->
+    <div class="sub-section">
+      <span class="ico">🍴</span>
+      <span class="text">Day 1 식사 추천</span>
+    </div>
+
+    <!-- 슬롯 4 -->
+    <div class="slot">
+      <div class="slot-pin coral">4</div>
+      <div class="slot-thumb"><img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🍣</div>
+      <div class="slot-body">
+        <div class="slot-time">⏰ 18:30 · DINNER</div>
+        <h3 class="slot-title">이세 스이요시</h3>
+        <p class="slot-meta">음식점 · 신주쿠권</p>
+        <div class="slot-divider"></div>
+        <p class="slot-recommend"><span class="label">추천</span>다양한 해산물 요리와 정갈한 일식 코스, 격조있는 저녁 식사</p>
+      </div>
+    </div>
+
+    <!-- 슬롯 5 -->
+    <div class="slot">
+      <div class="slot-pin coral">5</div>
+      <div class="slot-thumb"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=180&auto=format&fit=crop&q=80" alt="" onerror="this.remove()">🏨</div>
+      <div class="slot-body">
+        <div class="slot-time">⏰ 21:00 · NIGHT</div>
+        <h3 class="slot-title">숙소 복귀 · 신주쿠 호텔</h3>
+        <p class="slot-meta">숙소 · 신주쿠권</p>
+        <div class="slot-divider"></div>
+        <p class="slot-recommend"><span class="label">추천</span>도보 5분 거리 식당가, 부모님 휴식하기 좋은 동선 마무리</p>
+      </div>
+    </div>
+
+    <!-- 여백 (CTA 가리지 않게) -->
+    <div style="height: 80px;"></div>
+
+  </main>
+
+  <!-- 하단 CTA -->
+  <div class="cta-fixed">
+    <button class="btn primary">📥 내 일정으로 저장</button>
+  </div>
+
+  <!-- 하단 nav -->
+  <nav class="bottom-nav">
+    <button class="nav-item"><span class="icon">🏠</span>홈</button>
+    <button class="nav-item"><span class="icon">📥</span>보관함</button>
+    <button class="nav-item active"><span class="icon">📔</span>내 일정</button>
+    <button class="nav-item"><span class="icon">👤</span>프로필</button>
+  </nav>
+
+</div>
+</body>
+</html>

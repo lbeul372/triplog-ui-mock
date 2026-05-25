@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TripLog AI — 저장만 하던 콘텐츠가 일정이 되다</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="device">
+
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="header-logo">
+      <span class="dot"></span>TripLog<span style="color: var(--accent); margin-left: 2px;">AI</span>
+    </div>
+    <div class="header-spacer" style="flex: 1;"></div>
+    <button class="header-btn">🔍</button>
+    <button class="header-btn">🔔</button>
+    <button class="header-btn">👤</button>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero — 새 방향 후크 -->
+    <section class="hero" style="background-image: linear-gradient(135deg, rgba(93,168,197,0.25), rgba(15,40,60,0.6)), url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&auto=format&fit=crop&q=80');">
+      <div class="hero-eyebrow">✨ 저장만 하던 콘텐츠가 일정이 되다</div>
+      <h1 class="hero-title">유튜브·블로그·인스타,<br>던지면 내 일정이 돼요</h1>
+      <p class="hero-sub">보던 여행 콘텐츠 링크 하나면 — AI가 실제 장소만 뽑아 정리</p>
+      <button class="btn">📥 콘텐츠 담기</button>
+    </section>
+
+    <!-- 보관함 위젯 (Planning Paradox 후크) -->
+    <section class="card" style="margin-top: 16px; display:flex; align-items:center; gap:12px; border:1.5px solid var(--primary-soft); background: linear-gradient(135deg,#EAF4FA,#FCEFEC);">
+      <div style="width:46px; height:46px; border-radius:12px; background:var(--bg); display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0; box-shadow:var(--shadow-sm);">📥</div>
+      <div style="flex:1; min-width:0;">
+        <div style="font-size:13.5px; font-weight:800; color:var(--primary-darker);">보관함에 10개가 기다려요</div>
+        <div style="font-size:11.5px; color:var(--text-soft); margin-top:2px;">정리하면 바로 일정이 완성됩니다</div>
+      </div>
+      <button class="btn primary sm" style="width:auto; padding:0 14px;">정리하기 →</button>
+    </section>
+
+    <!-- 빠른 진입 3갈래 -->
+    <section style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
+      <div class="card" style="text-align: center; padding: 14px 6px;">
+        <div style="font-size: 24px; margin-bottom: 4px;">📥</div>
+        <div style="font-size: 11.5px; font-weight: 700;">콘텐츠로</div>
+      </div>
+      <div class="card" style="text-align: center; padding: 14px 6px;">
+        <div style="font-size: 24px; margin-bottom: 4px;">✨</div>
+        <div style="font-size: 11.5px; font-weight: 700;">AI 맞춤</div>
+      </div>
+      <div class="card" style="text-align: center; padding: 14px 6px;">
+        <div style="font-size: 24px; margin-bottom: 4px;">📝</div>
+        <div style="font-size: 11.5px; font-weight: 700;">직접 짜기</div>
+      </div>
+    </section>
+
+    <!-- 추천 코스 (가로 스크롤) -->
+    <h2 class="section-title">🔥 인기 추천 코스</h2>
+    <div class="scroll-row">
+      <div class="course-card">
+        <div class="course-cover" style="background-image: url('https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&auto=format&fit=crop&q=80'); justify-content: flex-end;">
+          <div><div style="font-size: 18px; font-weight: 900;">🗾 도쿄</div><div style="opacity: 0.95; font-weight: 600;">4박 5일</div></div>
+        </div>
+        <div class="course-body">
+          <h4 class="course-title">부모님과 여유로운 도쿄</h4>
+          <div class="course-meta"><span class="avatar">J</span> jiwon <span style="margin-left: auto;">❤️ 234</span></div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-cover" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&auto=format&fit=crop&q=80'); justify-content: flex-end;">
+          <div><div style="font-size: 18px; font-weight: 900;">🏝️ 발리</div><div style="opacity: 0.95; font-weight: 600;">5박 6일</div></div>
+        </div>
+        <div class="course-body">
+          <h4 class="course-title">신혼여행 발리 풀빌라 코스</h4>
+          <div class="course-meta"><span class="avatar">Y</span> yuri <span style="margin-left: auto;">❤️ 189</span></div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-cover" style="background-image: url('https://images.unsplash.com/photo-1517722014278-c256a91a6fba?w=600&auto=format&fit=crop&q=80'); justify-content: flex-end;">
+          <div><div style="font-size: 18px; font-weight: 900;">🍊 제주</div><div style="opacity: 0.95; font-weight: 600;">2박 3일</div></div>
+        </div>
+        <div class="course-body">
+          <h4 class="course-title">제주 동부 자연 일주</h4>
+          <div class="course-meta"><span class="avatar">M</span> minho <span style="margin-left: auto;">❤️ 156</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- YouTube 큐레이션 -->
+    <h2 class="section-title">▶️ YouTube 큐레이션 코스</h2>
+    <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 12px;">
+      <div style="height: 150px; background-image: linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&auto=format&fit=crop&q=80'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--accent); box-shadow: 0 6px 18px rgba(0,0,0,0.25);">▶</div>
+        <div style="position: absolute; bottom: 8px; right: 10px; background: rgba(0,0,0,0.7); color: #fff; font-size: 10px; padding: 3px 6px; border-radius: 4px; font-weight: 600;">12:34</div>
+      </div>
+      <div style="padding: 12px 14px;">
+        <h4 style="margin: 0 0 4px; font-size: 14px; font-weight: 700;">[정제형] 도쿄 4박5일 vlog — 진짜 다 가본 곳만</h4>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px;">
+          <span class="chip gray">🍱 규카츠 모토무라</span>
+          <span class="chip gray">⛩️ 메이지 신궁</span>
+          <span class="chip gray">+8</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 여행기 미리보기 -->
+    <h2 class="section-title">✍️ 여행자의 여행기</h2>
+    <div class="card" style="padding: 0; overflow: hidden;">
+      <div style="height: 110px; background-image: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=600&auto=format&fit=crop&q=80'); background-size: cover; background-position: center; padding: 12px; color: #fff; display: flex; align-items: flex-end;">
+        <div style="font-size: 13px; font-weight: 700; text-shadow: 0 2px 8px rgba(0,0,0,0.4);">"엄마 아빠 데리고 도쿄, 진짜 잘 다녀왔어요"</div>
+      </div>
+      <div style="padding: 12px 14px;">
+        <div class="author-row" style="margin-bottom: 6px;">
+          <span class="ava">J</span>
+          <div><div class="who">jiwon</div><div class="when">2일 전 · 12 슬롯</div></div>
+          <div style="margin-left: auto; font-size: 11px; color: var(--text-soft);">❤️ 234 · 📥 89</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 24px;"></div>
+  </main>
+
+  <!-- 하단 nav -->
+  <nav class="bottom-nav">
+    <button class="nav-item active"><span class="icon">🏠</span>홈</button>
+    <button class="nav-item"><span class="icon">📥</span>보관함</button>
+    <button class="nav-item"><span class="icon">📔</span>내 일정</button>
+    <button class="nav-item"><span class="icon">👤</span>프로필</button>
+  </nav>
+
+</div>
+</body>
+</html>
